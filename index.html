@@ -1,210 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TrackSheet - Attendance & Academics</title>
-    <meta name="description" content="TrackSheet - Track attendance, marks, papers, notifications, and more. Beautiful, fast, and privacy-first." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <!-- Preloader -->
-    <div id="preloader">
-      <div class="brew">
-        <div class="cup"></div>
-        <div class="steam s1"></div>
-        <div class="steam s2"></div>
-        <div class="steam s3"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackSheet - Attendance & Academics</title>
+  <meta name="description"
+    content="TrackSheet - Track attendance, marks, papers, notifications, and more. Beautiful, fast, and privacy-first." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="brew">
+      <div class="cup"></div>
+      <div class="steam s1"></div>
+      <div class="steam s2"></div>
+      <div class="steam s3"></div>
+    </div>
+    <p class="preloader-text">Hang tight — brewing some cool things ☕</p>
+  </div>
+
+  <!-- Page Wrapper -->
+  <div id="app" class="hidden">
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="hero-content container">
+        <img src="./assets/logo.png" alt="TrackSheet Logo" class="logo" />
+        <h1 class="hero-title">TrackSheet</h1>
+        <p class="subtitle">Your attendance and academics companion - simple, powerful, beautiful.</p>
+        <div class="cta-row">
+          <a href="https://play.google.com/store/apps/details?id=com.stoopidideas.attendex&hl=en" class="btn store-btn"
+            aria-label="Get it on Google Play">
+            <span class="store-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 4.27v15.46c0 .74.8 1.2 1.43.84l10.9-6.06L4.43 3.43C3.8 3.07 3 3.53 3 4.27z"
+                  fill="#34A853" />
+                <path d="M20.58 10.93L17 8.94l-2.67 2.57L17 14.08l3.58-1.99c.66-.36.66-1.32 0-1.16z" fill="#FBBC05" />
+                <path d="M4.43 3.43l9.9 9.9L17 8.94 5.57 3.16c-.47-.26-1.05.08-1.14.27z" fill="#4285F4" />
+                <path d="M4.43 20.57l9.9-9.9L17 14.08 5.57 19.86c-.47.26-1.05-.08-1.14-.27z" fill="#EA4335" />
+              </svg>
+            </span>
+            <span>Google Play</span>
+          </a>
+          <a href="https://apps.apple.com/in/app/tracksheet/id6745765711" class="btn store-btn"
+            aria-label="Download on the App Store">
+            <span class="store-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.36 1.64c-.96.56-2.02 1.6-1.86 2.86 1.16.1 2.34-.58 3.02-1.42.68-.84.98-2.02.84-3.08-1 .02-2.04.58-3 1.64z" />
+                <path
+                  d="M21.5 17.28c-.48 1.08-.7 1.54-1.32 2.46-.86 1.26-2.1 2.84-3.62 2.86-1.34.02-1.68-.84-3.5-.84-1.82 0-2.2.82-3.54.86-1.52.04-2.68-1.36-3.54-2.62-2.42-3.52-2.68-7.64-1.18-9.82 1.06-1.54 2.74-2.48 4.32-2.48 1.6 0 2.6.86 3.92.86 1.3 0 2.06-.86 3.92-.86 1.42 0 2.92.78 3.96 2.14-3.48 1.92-2.92 6.98.58 7.24z" />
+              </svg>
+            </span>
+            <span>App Store</span>
+          </a>
+          <a href="#contact" class="btn ghost">Contact Us</a>
+        </div>
+        <div class="cta-row" style="margin-top:10px">
+          <a href="./terms.html" class="btn ghost">Terms &amp; Conditions</a>
+          <a href="./privacy.html" class="btn ghost">Privacy Policy</a>
+          <a href="./refunds.html" class="btn ghost">Cancellation &amp; Refunds</a>
+        </div>
       </div>
-      <p class="preloader-text">Hang tight — brewing some cool things ☕</p>
-    </div>
+      <div class="hero-shapes">
+        <span class="shape s1"></span>
+        <span class="shape s2"></span>
+        <span class="shape s3"></span>
+      </div>
+    </header>
 
-    <!-- Page Wrapper -->
-    <div id="app" class="hidden">
-      <!-- Hero Section -->
-      <header class="hero" id="home">
-        <div class="hero-bg"></div>
-        <div class="hero-content container">
-          <img src="./assets/logo.png" alt="TrackSheet Logo" class="logo"  />
-          <h1 class="hero-title">TrackSheet</h1>
-          <p class="subtitle">Your attendance and academics companion - simple, powerful, beautiful.</p>
-          <div class="cta-row">
-            <a href="https://play.google.com/store/apps/details?id=com.stoopidideas.attendex&hl=en" class="btn store-btn" aria-label="Get it on Google Play">
-              <span class="store-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 4.27v15.46c0 .74.8 1.2 1.43.84l10.9-6.06L4.43 3.43C3.8 3.07 3 3.53 3 4.27z" fill="#34A853"/>
-                  <path d="M20.58 10.93L17 8.94l-2.67 2.57L17 14.08l3.58-1.99c.66-.36.66-1.32 0-1.16z" fill="#FBBC05"/>
-                  <path d="M4.43 3.43l9.9 9.9L17 8.94 5.57 3.16c-.47-.26-1.05.08-1.14.27z" fill="#4285F4"/>
-                  <path d="M4.43 20.57l9.9-9.9L17 14.08 5.57 19.86c-.47.26-1.05-.08-1.14-.27z" fill="#EA4335"/>
-                </svg>
-              </span>
-              <span>Google Play</span>
-            </a>
-            <a href="https://apps.apple.com/in/app/tracksheet/id6745765711" class="btn store-btn" aria-label="Download on the App Store">
-              <span class="store-icon" aria-hidden="true">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M16.36 1.64c-.96.56-2.02 1.6-1.86 2.86 1.16.1 2.34-.58 3.02-1.42.68-.84.98-2.02.84-3.08-1 .02-2.04.58-3 1.64z"/>
-                  <path d="M21.5 17.28c-.48 1.08-.7 1.54-1.32 2.46-.86 1.26-2.1 2.84-3.62 2.86-1.34.02-1.68-.84-3.5-.84-1.82 0-2.2.82-3.54.86-1.52.04-2.68-1.36-3.54-2.62-2.42-3.52-2.68-7.64-1.18-9.82 1.06-1.54 2.74-2.48 4.32-2.48 1.6 0 2.6.86 3.92.86 1.3 0 2.06-.86 3.92-.86 1.42 0 2.92.78 3.96 2.14-3.48 1.92-2.92 6.98.58 7.24z"/>
-                </svg>
-              </span>
-              <span>App Store</span>
-            </a>
-            <a href="#contact" class="btn ghost">Contact Us</a>
-          </div>
-           <div class="cta-row" style="margin-top:10px">
-          <a href="https://tracksheet.vercel.app/terms.html" class="btn ghost">Terms &amp; Conditions</a>
-          <a href="https://tracksheet.vercel.app/privacy.html" class="btn ghost">Privacy Policy</a>
-          <a href="https://tracksheet.vercel.app/refunds.html" class="btn ghost">Cancellation &amp; Refunds</a>
+    <!-- Features Section -->
+    <section class="features container" id="features">
+      <h2 class="section-title">Why you'll love TrackSheet</h2>
+      <div class="grid">
+        <div class="card fade-in icon-graphs">
+          <h3>Attendance Dashboard</h3>
+          <p>Overall and subject-wise attendance with weekly trends and forecasts.</p>
         </div>
+        <div class="card fade-in icon-notepad">
+          <h3>Marks & Papers</h3>
+          <p>Track subject-wise marks and access previous year papers easily.</p>
         </div>
-        <div class="hero-shapes">
-          <span class="shape s1"></span>
-          <span class="shape s2"></span>
-          <span class="shape s3"></span>
+        <div class="card fade-in icon-friends">
+          <h3>Friends & Compare</h3>
+          <p>Add friends and compare performance in a glance.</p>
         </div>
-      </header>
+        <div class="card fade-in icon-bell">
+          <h3>Smart Notifications</h3>
+          <p>Stay updated with important alerts and announcements.</p>
+        </div>
+        <div class="card fade-in icon-star">
+          <h3>Premium Experience</h3>
+          <p>Ad‑free with privacy protection and priority support via Juspay payments.</p>
+        </div>
+        <div class="card fade-in icon-widget">
+          <h3>iOS Widget</h3>
+          <p>Home screen widget to glance attendance in real time.</p>
+        </div>
+      </div>
+    </section>
 
-      <!-- Features Section -->
-      <section class="features container" id="features">
-        <h2 class="section-title">Why you'll love TrackSheet</h2>
-        <div class="grid">
-          <div class="card fade-in icon-graphs">
-            <h3>Attendance Dashboard</h3>
-            <p>Overall and subject-wise attendance with weekly trends and forecasts.</p>
-          </div>
-          <div class="card fade-in icon-notepad">
-            <h3>Marks & Papers</h3>
-            <p>Track subject-wise marks and access previous year papers easily.</p>
-          </div>
-          <div class="card fade-in icon-friends">
-            <h3>Friends & Compare</h3>
-            <p>Add friends and compare performance in a glance.</p>
-          </div>
-          <div class="card fade-in icon-bell">
-            <h3>Smart Notifications</h3>
-            <p>Stay updated with important alerts and announcements.</p>
-          </div>
-          <div class="card fade-in icon-star">
-            <h3>Premium Experience</h3>
-            <p>Ad‑free with privacy protection and priority support via Juspay payments.</p>
-          </div>
-          <div class="card fade-in icon-widget">
-            <h3>iOS Widget</h3>
-            <p>Home screen widget to glance attendance in real time.</p>
-          </div>
+    <!-- Screenshots Section (scroll-sequenced) -->
+    <section class="screenshots" id="screenshots">
+      <div class="container">
+        <h2 class="section-title">App Screenshots</h2>
+        <p class="muted">Scroll to preview the experience</p>
+      </div>
+      <div class="screenshots-sequence container">
+        <div class="phone-frame">
+          <img src="./assets/appsc1.jpg" alt="Screenshot 1" class="shot shot-1" />
+          <img src="./assets/appsc2.jpg" alt="Screenshot 2" class="shot shot-2" />
+          <img src="./assets/appsc3.jpg" alt="Screenshot 3" class="shot shot-3" />
+          <img src="./assets/appsc4.jpg" alt="Screenshot 4" class="shot shot-4" />
+          <img src="./assets/appsc5.jpg" alt="Screenshot 5" class="shot shot-5" />
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Screenshots Section (scroll-sequenced) -->
-      <section class="screenshots" id="screenshots">
-        <div class="container">
-          <h2 class="section-title">App Screenshots</h2>
-          <p class="muted">Scroll to preview the experience</p>
+
+
+    <!-- About / Extra polish section -->
+    <section class="about container" id="about">
+      <div class="about-grid">
+        <div class="about-card fly-in-left">
+          <h3>Beautifully engineered</h3>
+          <p>Crafted with Flutter, Firebase, and modern design. Smooth animations, smart caching, and optimized
+            performance.</p>
         </div>
-        <div class="screenshots-sequence container">
-          <div class="phone-frame">
-            <img src="./assets/appsc1.jpg" alt="Screenshot 1" class="shot shot-1"  />
-            <img src="./assets/appsc2.jpg" alt="Screenshot 2" class="shot shot-2" />
-            <img src="./assets/appsc3.jpg" alt="Screenshot 3" class="shot shot-3" />
-            <img src="./assets/appsc4.jpg" alt="Screenshot 4" class="shot shot-4" />
-            <img src="./assets/appsc5.jpg" alt="Screenshot 5" class="shot shot-5" />
-          </div>
+        <div class="about-card fly-in-right">
+          <h3>Privacy‑first</h3>
+          <p>Your data stays yours. Built‑in privacy controls and secure integrations for peace of mind.</p>
         </div>
-      </section>
+      </div>
+    </section>
 
-      
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title">Get in touch</h2>
+        <div class="contact-grid">
 
-      <!-- About / Extra polish section -->
-      <section class="about container" id="about">
-        <div class="about-grid">
-          <div class="about-card fly-in-left">
-            <h3>Beautifully engineered</h3>
-            <p>Crafted with Flutter, Firebase, and modern design. Smooth animations, smart caching, and optimized performance.</p>
+          <div class="contact-card fade-in">
+            <h3>Feedback</h3>
+            <p>You can submit feedback directly inside the app.</p>
+            <p class="muted">Open the app → More → Send Feedback</p>
           </div>
-          <div class="about-card fly-in-right">
-            <h3>Privacy‑first</h3>
-            <p>Your data stays yours. Built‑in privacy controls and secure integrations for peace of mind.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section class="contact" id="contact">
-        <div class="container">
-          <h2 class="section-title">Get in touch</h2>
-          <div class="contact-grid">
-           
-            <div class="contact-card fade-in">
-              <h3>Feedback</h3>
-              <p>You can submit feedback directly inside the app.</p>
-              <p class="muted">Open the app → More → Send Feedback</p>
-            </div>
-            <div class="contact-card fade-in">
-              <h3>Mail Us</h3>
-              <p>We’d love to hear from you. Send us an email anytime.</p>
-              <div class="store-badges">
-                <a class="badge ghost" href="mailto:support@xdevs.tech">Compose Email</a>
-              </div>
+          <div class="contact-card fade-in">
+            <h3>Mail Us</h3>
+            <p>We’d love to hear from you. Send us an email anytime.</p>
+            <div class="store-badges">
+              <a class="badge ghost" href="mailto:support@xdevs.tech">Compose Email</a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Bottom Navbar -->
-      <nav class="bottom-nav">
-        <a href="#home" class="nav-item" data-nav>
-          <span class="label">Home</span>
-        </a>
-        <a href="#features" class="nav-item" data-nav>
-          <span class="label">Features</span>
-        </a>
-        <a href="#screenshots" class="nav-item" data-nav>
-          <span class="label">Screens</span>
-        </a>
-        <a href="#about" class="nav-item" data-nav>
-          <span class="label">About</span>
-        </a>
-        <span class="nav-indicator"></span>
-      </nav>
+    <!-- Bottom Navbar -->
+    <nav class="bottom-nav">
+      <a href="#home" class="nav-item" data-nav>
+        <span class="label">Home</span>
+      </a>
+      <a href="#features" class="nav-item" data-nav>
+        <span class="label">Features</span>
+      </a>
+      <a href="#screenshots" class="nav-item" data-nav>
+        <span class="label">Screens</span>
+      </a>
+      <a href="#about" class="nav-item" data-nav>
+        <span class="label">About</span>
+      </a>
+      <span class="nav-indicator"></span>
+    </nav>
 
-      <!-- Footer -->
-      <footer class="site-footer" id="footer">
-        <div class="container footer-grid">
-          <div>
-            <div class="footer-brand">
-              <img src="./assets/logo.png" alt="TrackSheet Logo" class="footer-logo" />
-              <span>TrackSheet</span>
-            </div>
-            <p class="muted">Attendance & Academics Companion</p>
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="./assets/logo.png" alt="TrackSheet Logo" class="footer-logo" />
+            <span>TrackSheet</span>
           </div>
-          <div>
-            <h4>Contact</h4>
-            <ul>
-              <li>Email: <a href="mailto:support@xdevs.tech">support@xdevs.tech</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>Links</h4>
-            <ul>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#screenshots">Screenshots</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
+          <p class="muted">Attendance & Academics Companion</p>
         </div>
-        <div class="container footer-bottom">
-          <span>© <span id="year"></span> TrackSheet. All rights reserved.</span>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Email: <a href="mailto:support@xdevs.tech">support@xdevs.tech</a></li>
+          </ul>
         </div>
-      </footer>
-    </div>
-  </body>
-  </html>
+        <div>
+          <h4>Links</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="./terms.html">Terms</a></li>
+            <li><a href="./privacy.html">Privacy</a></li>
+            <li><a href="./refunds.html">Refunds</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year"></span> TrackSheet. All rights reserved.</span>
+      </div>
+    </footer>
+  </div>
+</body>
 
-
+</html>

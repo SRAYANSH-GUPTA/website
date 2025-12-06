@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cancellation & Refunds - TrackSheet</title>
+    <meta name="description" content="Cancellation and Refunds Policy for TrackSheet." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <!-- Page Wrapper -->
+    <div id="app">
+        <!-- Legal Content Header -->
+        <header class="hero" style="min-height: 40vh;">
+            <div class="hero-bg"></div>
+            <div class="hero-content container">
+                <a href="./index.html">
+                    <img src="./assets/logo.png" alt="TrackSheet Logo" class="logo"
+                        style="width: 50px; height: 50px;" />
+                </a>
+                <h1 class="hero-title" style="font-size: clamp(32px, 6vw, 48px);">Cancellation & Refunds</h1>
+            </div>
+            <div class="hero-shapes">
+                <span class="shape s1"></span>
+                <span class="shape s2"></span>
+                <span class="shape s3"></span>
+            </div>
+        </header>
+
+        <!-- Content Section -->
+        <section class="container" style="padding-bottom: 80px; max-width: 800px;">
+            <div class="card"
+                style="padding: 32px; background: #141a28; border: 1px solid #2b3142; border-radius: 12px; box-shadow: none;">
+
+                <h3>No Refund Policy</h3>
+                <p class="muted" style="text-align: left;">All purchases for premium features, subscriptions, or any
+                    in-app content in TrackSheet are <strong>final and non-refundable</strong>.</p>
+                <p class="muted" style="text-align: left;">We do not offer refunds or credits for partially used
+                    periods, regardless of the reason for cancellation. By making a purchase, you acknowledge and agree
+                    to this no-refund policy.</p>
+
+                <h3>Cancellation</h3>
+                <p class="muted" style="text-align: left;">You may cancel your subscription at any time through the
+                    respective App Store (Google Play or Apple App Store) subscription management settings. The
+                    cancellation will take effect at the end of the current billing period, and you will retain access
+                    to premium features until that date.</p>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="site-footer" id="footer">
+            <div class="container footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="./assets/logo.png" alt="TrackSheet Logo" class="footer-logo" />
+                        <span>TrackSheet</span>
+                    </div>
+                    <p class="muted">Attendance & Academics Companion</p>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Email: <a href="mailto:support@xdevs.tech">support@xdevs.tech</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="./index.html#features">Features</a></li>
+                        <li><a href="./index.html#screenshots">Screenshots</a></li>
+                        <li><a href="./index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="./terms.html">Terms</a></li>
+                        <li><a href="./privacy.html">Privacy</a></li>
+                        <li><a href="./refunds.html">Refunds</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <span>© <span id="year"></span> TrackSheet. All rights reserved.</span>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

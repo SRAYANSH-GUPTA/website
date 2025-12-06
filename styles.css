@@ -97,7 +97,7 @@ body{
 
 /* Footer */
 .site-footer{margin-top:80px;padding:36px 0;border-top:1px solid #1f2638;background:linear-gradient(180deg,#0b0f16,#0b0f16)}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;align-items:start}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:16px;align-items:start}
 .footer-brand{display:flex;align-items:center;gap:10px;font-weight:700}
 .footer-logo{width:28px;height:28px;object-fit:contain;filter:drop-shadow(0 4px 12px #0006)}
 .footer-grid h4{margin:0 0 8px}
